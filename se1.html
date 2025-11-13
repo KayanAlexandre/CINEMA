@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sessões — Filme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#759dca; --card:#faffff; --muted:#98a0a6; --accent:#ff6b6b; --radius:14px;
+    }
+    body{
+      margin:0; font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,var(--bg),#05090d);
+      color:#eaf2f7; padding:28px;
+    }
+    .container{max-width:1000px;margin:auto;display:flex;gap:26px;}
+    .poster{width:280px;min-width:260px;border-radius:var(--radius);overflow:hidden;height:420px;background:#0c1215;}
+    .poster img{width:100%;height:100%;object-fit:cover;}
+    h1{margin:0;font-size:28px;} .genero{color:var(--muted);margin-top:-6px;}
+    .sinopse{line-height:1.45;font-size:15px;}
+    .horarios{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
+    .hora{padding:10px 14px;font-size:14px;border-radius:var(--radius);background:rgb(247, 246, 246);border:1px solid rgba(14, 13, 13, 0.897);cursor:pointer;transition:.15s;}    
+    .hora:hover{transform:translateY(-3px);}    
+    .voltar a{color:var(--muted);text-decoration:none;font-size:14px;} .voltar a:hover{color:#fff;}     
+    @media(max-width:750px){.container{flex-direction:column;text-align:center}.poster{width:60%;height:auto}}
+  </style>
+</head>
+<body>
+
+<div class="voltar"><a href="index.html">← Voltar</a></div>
+
+<div class="container">
+  <!-- ALTERAR SOMENTE ESTA IMAGEM PARA O FILME -->
+  <div class="poster">
+    <img src="f4.jpg" alt="Poster do filme" />
+  </div>
+
+  <div class="info">
+    <!-- TÍTULO DO FILME -->
+    <h1 id="titulo-filme">Formula 1</h1>
+    
+    <!-- GÊNERO / CLASSIFICAÇÃO / DURAÇÃO -->
+    <p class="genero" id="info-filme">Gênero:Ação • Duração:2h39min • Classificação:12 anos</p>
+
+    <!-- SINOPSE - ALTERAR ESSE TEXTO -->
+    <p class="sinopse" id="sinopse-filme">
+     Em F1, um piloto veterano de Fórmula 1 volta da aposentadoria para ser o mentor de seu jovem colega de equipe.
+     No filme produzido pelo heptacampeão de Fórmula 1 Lewis Hamilton, depois de abandonar as pistas, o lendário piloto Sonny Hayes (Brad Pitt)
+     é convencido a voltar a correr para apoiar Joshua Pearce (Damson Idris), o jovem novato da escuderia fictícia ApexGP.
+     Disposto a todos os riscos, Sonny monta uma estratégia para fazer a equipe se tornar vitoriosa, para isso ele precisará do apoio da comissão técnica e de pessoas influentes do esporte,
+     mostrando que a corrida vai muito além das curvas dos autódromos. O longa conta com a participação dos pilotos reais da F1 e foi gravado durante as corridas do GP da Inglaterra.
+    </p>
+
+    <h3>Horários</h3>
+    <div class="horarios">
+      <button class="hora">12:00</button>
+      <button class="hora">14:30</button>
+      <button class="hora">17:00</button>
+      <button class="hora">19:30</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
