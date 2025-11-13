@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sessões — Filme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111b; --card:#bb5d05; --muted:#e7e7e7; --accent:#bae910; --radius:14px;
+    }
+    body{
+      margin:0; font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,var(--bg),#002770);
+      color:#eaf2f7; padding:28px;
+    }
+    .container{max-width:1000px;margin:auto;display:flex;gap:26px;}
+    .poster{width:280px;min-width:260px;border-radius:var(--radius);overflow:hidden;height:420px;background:#0c1215;}
+    .poster img{width:100%;height:100%;object-fit:cover;}
+    h1{margin:0;font-size:28px;} .genero{color:var(--muted);margin-top:-6px;}
+    .sinopse{line-height:1.45;font-size:15px;}
+    .horarios{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
+    .hora{padding:10px 14px;font-size:14px;border-radius:var(--radius);background:rgba(245, 243, 243, 0.89);border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:.15s;}    
+    .hora:hover{transform:translateY(-3px);}    
+    .voltar a{color:var(--muted);text-decoration:none;font-size:14px;} .voltar a:hover{color:#fff;}     
+    @media(max-width:750px){.container{flex-direction:column;text-align:center}.poster{width:60%;height:auto}}
+  </style>
+</head>
+<body>
+
+<div class="voltar"><a href="index.html">← Voltar</a></div>
+
+<div class="container">
+  <!-- ALTERAR SOMENTE ESTA IMAGEM PARA O FILME -->
+  <div class="poster">
+    <img src="super.jpg" alt="Poster do filme" />
+  </div>
+
+  <div class="info">
+    <!-- TÍTULO DO FILME -->
+    <h1 id="titulo-filme">Superman</h1>
+    
+    <!-- GÊNERO / CLASSIFICAÇÃO / DURAÇÃO -->
+    <p class="genero" id="info-filme">Aventura,ação,ficção cientifica • 2h09min • 14</p>
+
+    <!-- SINOPSE - ALTERAR ESSE TEXTO -->
+    <p class="sinopse" id="sinopse-filme">
+     Um herói movido pela crença e pela esperança na bondade da humanidade. 
+     Em Superman, acompanhamos a jornada do super-herói em tentar conciliar suas duas personas:
+     sua herança extraterrestre como kryptoniano e sua vida humana, 
+     criado como Clark Kent (David Corenswet) na cidade de Smallville no Kansas. 
+     Dirigido por James Gunn, o novo filme irá reunir personagens, heróis e vilões clássicos da história de Superman,
+     como Lex Luthor (Nicholas Hoult), Lois Lane (Rachel Brosnahan), Lanterna Verde (Nathan Fillion), Mulher-Gavião (Isabela Merced), entre outros.
+     O chamado de Superman será colocado à prova através de uma série de novas aventuras épicas e diante de uma sociedade
+     que enxerga seus valores de justiça e verdade como antiquados.
+    </p>
+
+    <h3>Horários</h3>
+    <div class="horarios">
+      <button class="hora">12:00</button>
+      <button class="hora">14:30</button>
+      <button class="hora">17:00</button>
+      <button class="hora">19:30</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
