@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Kayanoplex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Logo no canto superior esquerdo -->
+  <img src="logo.png" alt="logo" class="logo-canto">
+
+  <div class="login-container">
+    <!-- Logo principal no lugar do título -->
+    <img src="logo.png" alt="Kayanoplex Logo" class="logo-centro">
+
+    <!-- Formulário de Login -->
+    <form id="loginForm">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" placeholder="Digite seu usuário" required>
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" placeholder="Digite sua senha" required>
+
+      <!-- Link de Cadastro -->
+      <p class="cadastre-se">
+        Não tem uma conta? <a href="javascript:void(0)" onclick="toggleCadastroForm()">Cadastre-se</a>
+      </p>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Formulário de Cadastro -->
+    <div id="cadastroForm" style="display: none;">
+      <h2 class="cadastro-title"></h2>
+      <form id="registerForm">
+        <label for="fullName">Nome Completo</label>
+        <input type="text" id="fullName" placeholder="Digite seu nome completo" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+        <label for="newPassword">Senha</label>
+        <input type="password" id="newPassword" placeholder="Digite sua senha" required>
+
+        <label for="confirmPassword">Confirmar Senha</label>
+        <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <!-- Link para voltar ao Login -->
+      <p>Já tem uma conta? <a href="javascript:void(0)" onclick="toggleCadastroForm()">Voltar para o login</a></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

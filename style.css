@@ -1,0 +1,327 @@
+:root {
+  --bg-color: #1e1e2f;
+  --header-footer: #2c2c44;
+  --text-color: #f5f5f5;
+  --border-color: #444;
+  --accent-color: #ff6b00;
+  --accent-hover: #e65a00;
+  --highlight-color: #ffc107;
+  --card-bg: #2c2c44;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ===== Header ===== */
+header {
+  background: var(--header-footer);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--highlight-color);
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--header-footer);
+  border-bottom: 1px solid var(--border-color);
+}
+
+select, .search input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ===== Carrossel ===== */
+/* ===== Carrossel ===== */
+/* ===== Carrossel ===== */
+.carousel {
+  position: relative;
+  max-width: 1400px;   /* largura máxima do carrossel */
+  margin: 40px auto;  /* centraliza na página */
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-container img {
+  width: 100%;          /* imagem ocupa toda a largura do carrossel */
+  max-width: 1400px;     /* limite máximo de largura */
+  height: 500px;        /* altura fixa */
+  object-fit: cover;    /* preenche o espaço sem distorcer */
+  flex-shrink: 0;       /* impede que a imagem encolha */
+}
+
+/* ===== Botões ===== */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel .prev {
+  left: 20px;
+}
+
+.carousel .next {
+  right: 20px;
+}
+
+/* ===== Responsivo (mobile) ===== */
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+    aspect-ratio: 16 / 8; /* um pouco mais alto no celular */
+    border-radius: 0;
+  }
+
+  .carousel button {
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
+}
+
+
+/* ===== Seções ===== */
+section {
+  padding: 30px 40px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.filmes, .cinemas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-color);
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: var(--accent-hover);
+}
+
+/* ===== Promoções ===== */
+.promocoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.promocoes img {
+  width: 150px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.promocoes button {
+  padding: 10px 20px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.promocoes button:hover {
+  background: var(--accent-hover);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--header-footer);
+  border-top: 1px solid var(--border-color);
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  color: var(--text-color);
+}
+
+footer h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+footer a:hover {
+  color: var(--highlight-color);
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .promocoes {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.cinemas-list {
+  display: flex;
+  justify-content: center;   /* centraliza os cards */
+  flex-wrap: wrap;           /* quebra linha se houver muitos */
+  gap: 20px;                 /* espaçamento entre os cinemas */
+  margin-top: 20px;
+}
+
+.cinemas-list .card {
+  background-color: #20223d;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 600px;              /* largura do card (ajuste como quiser) */
+  padding: 40px;
+  transition: transform 0.3s;
+}
+
+.cinemas-list .card img {
+  width: 100%;               /* imagem ocupa toda a largura do card */
+  height: 300px;             /* altura fixa para padronizar */
+  object-fit: cover;         /* corta sem distorcer */
+  border-radius: 10px;
+}
+
+.cinemas-list .card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cinemas-list .card button {
+  background-color: #ff6600;
+  color: #eeecec;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cinemas-list .card button:hover {
+  background-color: #cc5200;
+}
+/* ===== Título do filme no carrossel (estilizado) ===== */
+.carousel-title {
+  position: absolute;
+  top: 15px;              /* canto superior */
+  left: 15px;             /* canto esquerdo */
+  color: #ffffff;         /* branco */
+  font-weight: bold;
+  font-size: 2rem;        /* um pouco maior */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;   /* evita interferir com clique nas setas */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* sombra para legibilidade */
+}
+
+/* Mostra o título apenas quando o mouse está sobre o carrossel */
+.carousel:hover .carousel-title {
+  opacity: 1;
+}
+
